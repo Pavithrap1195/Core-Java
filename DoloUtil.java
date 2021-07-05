@@ -13,12 +13,12 @@ String manufacturedDate=sc.next();
 System.out.println("Enter the Expiry date");
 String expiryDate=sc.next();
 sc.close();
-Dolo dolo=new Dolo();
-dolo.medicineId=medicineId;
-dolo.price=price;
-dolo.manufacturedDate=manufacturedDate;
-dolo.expiryDate=expiryDate;
-dolo.recover();
+Medicine med=new Dolo();
+med.medicineId=medicineId;
+med.price=price;
+med.manufacturedDate=manufacturedDate;
+med.expiryDate=expiryDate;
+med.recover();
 System.out.println(medicineId+" "+price+" "+manufacturedDate+" "+expiryDate);
 }
 }

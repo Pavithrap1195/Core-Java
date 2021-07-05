@@ -13,12 +13,12 @@ int noOfPages= sc.nextInt();
 System.out.println("Enter the Price");
 double price= sc.nextDouble();
 sc.close();
-Death death=new Death();
-death.novelId=novelId;
-death.author=author;
-death.noOfPages=noOfPages;
-death.price=price;
+Novel novel=new Death();
+novel.novelId=novelId;
+novel.author=author;
+novel.noOfPages=noOfPages;
+novel.price=price;
 System.out.println(novelId+" "+author+" "+noOfPages+" "+price);
-death.gainingKnowledge();
+novel.gainingKnowledge(58);
 }
 }

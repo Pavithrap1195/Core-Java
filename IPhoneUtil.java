@@ -9,10 +9,10 @@ int smartPhoneId=sc.nextInt();
 System.out.println("Enter the Price");
 double price=sc.nextDouble();
 sc.close();
-IPhone iphone=new IPhone();
-iphone.smartPhoneId=smartPhoneId;
-iphone.price=price;
-iphone.easeOfWork();
+SmartPhone sp=new IPhone();
+sp.smartPhoneId=smartPhoneId;
+sp.price=price;
+sp.easeOfWork();
 System.out.println(smartPhoneId+" "+price);
 }
 }

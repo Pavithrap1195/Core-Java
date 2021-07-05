@@ -11,11 +11,11 @@ double price=sc.nextDouble();
 System.out.println("Enter the Manufactured by");
 String manufacturedBy=sc.next();
 sc.close();
-Maggi maggi =new Maggi();
-maggi.foodId=foodId;
-maggi.price=price;
-maggi.manufacturedBy=manufacturedBy;
-maggi.provideNutritionalSupport();
+Food food =new Maggi();
+food.foodId=foodId;
+food.price=price;
+food.manufacturedBy=manufacturedBy;
+food.provideNutritionalSupport();
 System.out.println(foodId+" "+price+" "+manufacturedBy);
 }
 }
