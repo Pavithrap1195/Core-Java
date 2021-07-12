@@ -1,25 +1,37 @@
 class FruitUtil{
 	
 	public static void main(String a[]){
-		Fruit fruit =new Fruit();
-		fruit.healthy();
+		FruitDTO fruit =new FruitDTO();
+		fruit.setName("Apple");
+		fruit.setPriceInKg(120.00);
+		fruit.setColor("Red");
+		System.out.println(fruit.getName());
+		System.out.println(fruit.getPriceInKg());
+		System.out.println(fruit.getColor());
 		
-		Mango mango=new Mango();
-		mango.setId(145);
-		mango.setPricePerKg(120);
-		mango.setColor("Yellow");
-		mango.healthy();
-		mango.yummy();
-		
-		Fruit frui=new Mango();
-		frui.setId(155);
-		frui.setPricePerKg(110);
-		frui.setColor("Green");
-		System.out.println(frui.getId());
-		System.out.println(frui.getPricePerKg());
-		System.out.println(frui.getColor());
-		
-		
-	}
+        
+        FruitDTO fruit1 =new FruitDTO();
+		fruit1.setName("Orange");
+		fruit1.setPriceInKg(150.00);
+		fruit1.setColor("orange");
+		System.out.println(fruit1.getName());
+		System.out.println(fruit1.getPriceInKg());
+		System.out.println(fruit1.getColor());
+		 		
 	
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
