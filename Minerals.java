@@ -1,58 +1,42 @@
 class Minerals{
 	
-	public int mineralsId;
-	public String name;
-	public String symbol;
-	public int atomicNumber;
-	public double densityIngpcm3;
-	
+	public static String name;
+	public static String symbol;
+	public static int atomicNumber;
+	public static double densityIngpcm3;
+	public static String color;
 	
 	public Minerals(){
-		System.out.println();
+		System.out.println("Minerals object is created");
 	}
 	
-	@Override
-	public int hashCode(){
-		return this.mineralsId;
+	{
+		System.out.println("Minerals init block is started");
+		name="Copper";
+		symbol="Cu";
+		atomicNumber=29;
+		densityIngpcm3=8.96;
+		color="Orange";
+		System.out.println(name+" "+symbol+" "+atomicNumber+" "+densityIngpcm3+" "+color);
+		System.out.println("Minerals init block is ended");
 	}
 
-	@Override
-	public boolean equals(Object mineral){
-		if(mineral instanceof Minerals){
-			Minerals mine=(Minerals)mineral;
-			if(this.hashCode()==mine.hashCode()){
-				return true;
-			}
-			if(this.name.equals(mine.name)){
-				return true;
-			}else{
-				System.out.println("Names are different");
-			
-			}
-			if(this.symbol.equals(mine.symbol)){
-				return true;
-			}else{
-				System.out.println("Symbols are different");
-				
-			}
-			if(this.atomicNumber==mine.atomicNumber){
-				return true;
-			}else{
-				System.out.println("Atomic numberes sre different");
-				
-			}
-			if(this.densityIngpcm3==mine.densityIngpcm3){
-				return true;
-			}else{
-				System.out.println("Density is different");
-				
-			}
-		}else{
-			System.out.println("Not a same type");
-		}
-		return false;
+	static{
+		System.out.println("Minerals static block is started");
+		name="Copper";
+		symbol="Cu";
+		atomicNumber=29;
+		densityIngpcm3=8.96;
+		color="Orange";
+		System.out.println(name+" "+symbol+" "+atomicNumber+" "+densityIngpcm3+" "+color);
+		System.out.println("Minerals static block is ended");
+	}
+	
+	public static void naturallyOccuring(){
+		System.out.println("Mineral is a chemical compound");
 	}
 
+	
 	
 	
 	
@@ -84,3 +68,6 @@ class Minerals{
 	
 	
 }
+
+
+
