@@ -2,12 +2,12 @@ public class PatientDTO{
 	
 	private String patientId;
 	private String name;
-	private String[] address;
+	private AddressDTO address;
 	private long mobileNo;
 	private int age;
 	
 	public PatientDTO(){
-		System.out.println(this.getClass().getSimpleName()+"object is created");
+		System.out.println(this.getClass().getSimpleName()+" object is created");
 	}
 	
 	public String getPatientId(){
@@ -26,11 +26,11 @@ public class PatientDTO{
 		this.name=name;
 	}
 	
-	public String[] getAddress(){
+	public AddressDTO getAddress(){
 		return address;
 	}
 	
-	public void setAddress(String[] address){
+	public void setAddress(AddressDTO address){
 		this.address=address;
 	}
 	

@@ -1,31 +1,31 @@
-class Hospital{
+class Hospital3{
 	
 	private String name;
 	public PatientDTO[] patients;
 	private int index;
 	
-	public Hospital(int size){
+	public Hospital3(int size){
 		patients=new PatientDTO[size];
 		System.out.println(this.getClass().getSimpleName()+" object is created");
 	}
 	
 	public void savePatients(PatientDTO patients){
 		if(patients!=null){
-			System.out.println("adding Patient Details");
-			this.patients[index++]=patients;
+			System.out.println("Adding patients details");
+			this.patients[index]=patients;
 		}
 		else{
-			System.out.println("Patient details are empty...Please add the patient details");
-		}	
+			System.out.println("Patient details empty...please fill the details");
+		}
 	}
 	
 	public void getPatients(){
 		for(int i=0;i<patients.length;i++){
 			if(patients[i]!=null){
-			System.out.println(patients[i].getPatientId()+" "+patients[i].getName()+" "+patients[i].getAge()+" "+patients[i].getMobileNo());
+				System.out.println(patients[i].getPatientId()+" "+patients[i].getName()+" "+patients[i].getAge()+" "+patients[i].getMoobileNo());
 			}
 			else{
-			System.out.println("No patient found");
+				System.out.println("No patients found");
 			}
 		}
 	}
@@ -51,7 +51,7 @@ class Hospital{
 			if(patients[i]!=null){
 				if(patientId.equals(patients[i].getPatientId())){
 					patients[i]=null;
-					deleted=true;
+					deleted =true;
 				}
 			}
 		}
@@ -63,24 +63,10 @@ class Hospital{
 		for(int i=0;i<patients.length;i++){
 			if(patients[i]!=null){
 				if(name.equals(patients[i].getName())){
-					System.out.println(patients[i].getPatientId()+" "+patients[i].getName()+" "+patients[i].getAddress()+" "+patients[i].getAge()+" "+patients[i].getMobileNo());
+					System.out.println(patients[i].getPatientId()+" "+patients[i].getAge()+" "+patients[i].getName()+" "+patients[i].getMoobileNo());
 				}
 				else{
-				System.out.println("No patient found");
-				}
-			}
-		}
-	}
-	
-	public void getPatientAgeByName(String name){
-		System.out.println("Invoked getPatientAgeByName()");
-		for(int i=0;i<patients.length;i++){
-			if(patients[i]!=null){
-				if(name.equals(patients[i].getName())){
-					System.out.println(patients[i].getAge());
-				}
-				else{
-				System.out.println("No patient found");
+					System.out.println("No patients found");
 				}
 			}
 		}
@@ -91,7 +77,7 @@ class Hospital{
 		for(int i=0;i<patients.length;i++){
 			if(patients[i]!=null){
 				if(name.equals(patients[i].getName())){
-					for(StateDTO state: patients[i].getAddress().getCountries().getStates()){
+					for(StateDTO state : patients[i].getAddress().getCountries().getStates()){
 						stateName=state.getStateName();
 					}
 				}
@@ -100,47 +86,22 @@ class Hospital{
 		return stateName;
 	}
 	
-		public String getStreetNamesByPatientId(String patientId){
-		String streetName=null;
-		for(int i=0;i<patients.length;i++){
-			if(patients[i]!=null){
-				if(patientId.equals(patients[i].getPatientId())){
-					for(StateDTO state: patients[i].getAddress().getCountries().getStates()){
-						for(CityDTO city:state.getCities()){
-							for(AreaDTO area: city.getAreas()){
-								System.out.println(area.getStreets());
-								for(StreetDTO street: area.getStreets()){
-									streetName=street.getStreetName();
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		return streetName;
+	public void setName(String name){
+		this.name=name;
 	}
-		
 	
 	public String getName(){
 		return name;
 	}
 	
-	public void setName(String name){
-		this.name=name;
+	public void setIndex(int Index){
+		this.index=index;
 	}
 	
 	public int getIndex(){
 		return index;
 	}
-	
-	public void setIndex(int index){
-		this.index=index;
-	}
-	
-	
-	
-	
+						
 	
 	
 	

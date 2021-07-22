@@ -1,31 +1,31 @@
-class Hospital{
+class Hospital1{
 	
 	private String name;
 	public PatientDTO[] patients;
 	private int index;
 	
-	public Hospital(int size){
+	public Hospital1(int size){
 		patients=new PatientDTO[size];
 		System.out.println(this.getClass().getSimpleName()+" object is created");
 	}
 	
 	public void savePatients(PatientDTO patients){
 		if(patients!=null){
-			System.out.println("adding Patient Details");
-			this.patients[index++]=patients;
+			System.out.println("Adding patients details");
+			this.patients[index]=patients;
 		}
 		else{
 			System.out.println("Patient details are empty...Please add the patient details");
-		}	
+		}
 	}
 	
 	public void getPatients(){
 		for(int i=0;i<patients.length;i++){
 			if(patients[i]!=null){
-			System.out.println(patients[i].getPatientId()+" "+patients[i].getName()+" "+patients[i].getAge()+" "+patients[i].getMobileNo());
+				System.out.println(patients[i].getPatientId()+""+patients[i].getName()+""+patients[i].getMobileNo()+""+patients[i].getAge());
 			}
 			else{
-			System.out.println("No patient found");
+				System.out.println("No patients found");
 			}
 		}
 	}
@@ -58,15 +58,16 @@ class Hospital{
 		return deleted;
 	}
 	
+	
 	public void getPatientByName(String name){
 		System.out.println("Invoked getPatientByName()");
 		for(int i=0;i<patients.length;i++){
 			if(patients[i]!=null){
 				if(name.equals(patients[i].getName())){
-					System.out.println(patients[i].getPatientId()+" "+patients[i].getName()+" "+patients[i].getAddress()+" "+patients[i].getAge()+" "+patients[i].getMobileNo());
+					System.out.println(patients[i].getPatientId()+""+patients[i].getName()+""+patients[i].getMobileNo()+""+patients[i].getAge());
 				}
 				else{
-				System.out.println("No patient found");
+					System.out.println("No patient found");
 				}
 			}
 		}
@@ -80,7 +81,7 @@ class Hospital{
 					System.out.println(patients[i].getAge());
 				}
 				else{
-				System.out.println("No patient found");
+					System.out.println("No patient found");
 				}
 			}
 		}
@@ -100,7 +101,7 @@ class Hospital{
 		return stateName;
 	}
 	
-		public String getStreetNamesByPatientId(String patientId){
+	public String getStreetNamesByPatientId(String patientId){
 		String streetName=null;
 		for(int i=0;i<patients.length;i++){
 			if(patients[i]!=null){
@@ -120,7 +121,6 @@ class Hospital{
 		}
 		return streetName;
 	}
-		
 	
 	public String getName(){
 		return name;
@@ -138,12 +138,8 @@ class Hospital{
 		this.index=index;
 	}
 	
-	
-	
-	
-	
-	
-	
+		
+			
 	
 	
 	
