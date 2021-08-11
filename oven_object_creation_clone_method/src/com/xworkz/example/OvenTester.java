@@ -4,7 +4,7 @@ import com.xworkz.example.clone.Oven;
 
 public class OvenTester {
 	
-	public static void main(String[] args) throws CloneNotSupportedException {
+	public static void main(String[] args) {
 		
 		Oven oven = new Oven();
 		oven.setName("Samsung");
@@ -14,10 +14,14 @@ public class OvenTester {
 		
 		System.out.println(oven.getName()+" "+oven.getPrice()+" "+oven.getTemperature()+" "+oven.getDuration());
 		
+		try {
 		Oven ove = (Oven)oven.clone();
 		ove.setPrice(8000.00);
 		ove.setDuration(200);
 		System.out.println(ove.getName()+" "+ove.getPrice()+" "+ove.getDuration()+" "+ove.getTemperature());
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 

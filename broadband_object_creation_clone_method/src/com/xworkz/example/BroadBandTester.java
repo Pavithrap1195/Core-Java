@@ -4,7 +4,7 @@ import com.xworkz.example.clone.BroadBand;
 
 public class BroadBandTester {
 	
-	public static void main(String[] args) throws CloneNotSupportedException {
+	public static void main(String[] args)  {
 		
 		BroadBand broadband = new BroadBand();
 		broadband.setName("Jio");
@@ -13,10 +13,13 @@ public class BroadBandTester {
 		
 		System.out.println(broadband.getName()+" "+broadband.getPrice()+" "+broadband.isDoesSupport4g());
 		
+		try {
 		BroadBand band = (BroadBand)broadband.clone();
 		band.setPrice(800.00);
 		System.out.println(band.getName()+" "+band.getPrice()+" "+band.isDoesSupport4g());
-		
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
